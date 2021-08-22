@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class Fondo : MonoBehaviour
 {
-     Material dibujo;
-     private float paralax=2f;
-     Vector2 offset;
- 
      void Start()
      {
-        SpriteRenderer sp=GetComponent<SpriteRenderer>();
-        dibujo=sp.material;
-        offset=dibujo.mainTextureOffset;
      }
      
      void Update()
      {
-        offset.x += Time.deltaTime/paralax;
-        dibujo.mainTextureOffset=offset;
+         Vector2 offset=new Vector2(Time.time * 1f, 0); 
+         GetComponent<Renderer>().material.mainTextureOffset=offset; 
      }
 }
