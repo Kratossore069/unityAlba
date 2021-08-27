@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Personaje : MonoBehaviour
 {
-    
+    GameObject gb;
     // Start is called before the first frame update
     void Start()
     {
